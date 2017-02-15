@@ -63,7 +63,7 @@ dim(combine)
 ##Part III: Uses descriptive activity names to name the activities in the data set
 ##-----------------------------------------------------------------------
 
-act_labels<-  read.table("./UCI/activity_labels.txt",header=FALSE)
+act_labels<-  read.table("./UCI HAR Dataset/activity_labels.txt",header=FALSE)
 combine_des<- merge(combine_ss,act_labels,by.x="X5",by.y="V1")
 combine_des <- combine_des[,c(ncol(combine_des),2,3:(ncol(combine_des)-1))]
 
